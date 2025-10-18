@@ -1,50 +1,65 @@
-# Welcome to your Expo app 👋
+# 🗺️ MarkerMap — приложение для сохранения меток и фото на карте
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**MarkerMap** — это мобильное приложение на **React Native (Expo)**, позволяющее пользователю:
+- добавлять метки на карту по долгу нажатию,  
+- сохранять к ним фото,  
+- просматривать и удалять их,  
+- сбрасывать все данные одним нажатием.  
 
-## Get started
+Все данные (метки и изображения) хранятся **локально** в SQLite с использованием **Drizzle ORM**.
 
-1. Install dependencies
+---
 
+## ⚙️ Стек технологий
+
+- **Expo** — фреймворк для React Native  
+- **React Native Maps** — работа с картами  
+- **expo-sqlite** — встроенная локальная база данных  
+- **Drizzle ORM** — современный ORM для typed SQL-запросов  
+- **Expo Router** — маршрутизация между экранами  
+- **TypeScript** — строгая типизация проекта  
+
+---
+
+## 🧩 Установка и запуск
+
+1. Убедись, что у тебя установлен **Node.js (LTS)** и **Expo CLI**:
    ```bash
+   npm install -g expo-cli
+   ```
+
+2. Клонируй репозиторий и установи зависимости:
+   ```bash
+   git clone <url_репозитория>
+   cd <папка_проекта>
    npm install
    ```
 
-2. Start the app
+3. Установи необходимые зависимости:
+   ```bash
+   npm install drizzle-orm expo-sqlite
+   ```
 
+4. Запусти проект:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. Отсканируй QR-код в **Expo Go** (на iOS/Android), чтобы протестировать приложение.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🧠 Основной функционал
 
-## Get a fresh project
+### 📍 Добавление меток
+- Нажми и удерживай на карте → создаётся новая метка с названием  
+  **"Метка N"**, где `N` — порядковый номер.
 
-When you're ready, run:
+### 🖼️ Добавление изображений
+- Открой метку → добавь фотографии (сохраняются локально в SQLite).
 
-```bash
-npm run reset-project
-```
+### 🗑️ Удаление меток
+- Нажми кнопку **"Сбросить все"** → удаляются все метки и связанные с ними изображения.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
